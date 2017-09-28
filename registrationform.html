@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Registration Form</title>
+</head>
+<body>
+	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	Name:<input type="text" name="name">
+	<span class="error">*<?php echo $nameerr;?></span>
+	<p></p>
+	email:<input type="text" name="email">
+	<span  class="error">*<?php echo $emailerr;?></span>
+	<p></p>
+	website:<input type="text" name="website">
+	<span  class="error">*<?php echo $websiteerr;?></span>
+	<p></p>
+	comments:<textarea
+		name="comments" rows="5" cols="40">
+	</textarea>
+	<p></p>
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female
+<span  class="error">*<?php echo $gendererr;?></span>
+<p></p>
+<input type="submit" name="submit" value="Submit">
+</form>
+
+</body>
+</html>
